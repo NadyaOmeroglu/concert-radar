@@ -1,0 +1,20 @@
+{"_embedded": {"events": [
+  {"id": "TM-MUNICH", "name": "Coldplay: Test Tour", "url": "https://www.ticketmaster.de/event/test-munich",
+   "classifications": [{"segment": {"name": "Music"}}],
+   "dates": {"start": {"localDate": "2027-06-01", "localTime": "20:00:00"}, "timezone": "Europe/Berlin", "status": {"code": "onsale"}},
+   "sales": {"public": {"startDateTime": "2026-10-24T08:00:00Z"}},
+   "priceRanges": [{"min": 79.5, "currency": "EUR"}],
+   "_embedded": {"venues": [{"name": "Olympiastadion", "city": {"name": "Munich"}, "country": {"countryCode": "DE"}}]}},
+  {"id": "TM-PARKING", "name": "Parking: Coldplay", "url": "https://www.ticketmaster.de/event/test-parking",
+   "classifications": [{"segment": {"name": "Miscellaneous"}}],
+   "dates": {"start": {"localDate": "2027-06-01"}, "status": {"code": "onsale"}},
+   "_embedded": {"venues": [{"name": "Olympiastadion", "city": {"name": "Munich"}, "country": {"countryCode": "DE"}}]}},
+  {"id": "TM-LONDON", "name": "Coldplay: Test Tour", "url": "https://www.ticketmaster.co.uk/event/test-london",
+   "classifications": [{"segment": {"name": "Music"}}],
+   "dates": {"start": {"localDate": "2027-06-20", "localTime": "19:00:00"}, "status": {"code": "onsale"}},
+   "_embedded": {"venues": [{"name": "Wembley Stadium", "city": {"name": "London"}, "country": {"countryCode": "GB"}}]}},
+  {"id": "TM-OSLO", "name": "Coldplay: Test Tour", "url": "https://www.ticketmaster.no/event/test-oslo",
+   "classifications": [{"segment": {"name": "Music"}}],
+   "dates": {"start": {"localDate": "2027-07-03", "timeTBA": true}, "status": {"code": "canceled"}},
+   "_embedded": {"venues": [{"name": "Ullevaal Stadion", "city": {"name": "Oslo"}, "country": {"countryCode": "NO"}}]}}
+]}, "page": {"size": 200, "totalElements": 4, "totalPages": 1, "number": 0}}

@@ -1,0 +1,22 @@
+<!doctype html><html><head><title>TEST FIXTURE: tour page</title>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [
+  {"@type": "MusicEvent", "name": "Coldplay Live", "startDate": "2027-06-01T19:30:00+02:00",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "performer": {"@type": "MusicGroup", "name": "Coldplay"},
+   "location": {"@type": "Place", "name": "Olympiastadion München",
+                "address": {"@type": "PostalAddress", "addressLocality": "München", "addressCountry": "DE"}},
+   "offers": {"@type": "Offer", "url": "https://example.org/tickets/munich", "availability": "https://schema.org/InStock",
+              "price": "89.00", "priceCurrency": "EUR"}},
+  {"@type": "MusicEvent", "name": "Coldplay Live", "startDate": "2027-08-01",
+   "eventStatus": "https://schema.org/EventPostponed",
+   "location": {"@type": "Place", "name": "Etihad Park",
+                "address": {"@type": "PostalAddress", "addressLocality": "Yas Island", "addressCountry": {"@type": "Country", "name": "United Arab Emirates"}}}},
+  {"@type": "MusicEvent", "name": "Support act night", "startDate": "2027-08-05",
+   "performer": [{"@type": "MusicGroup", "name": "Some Other Band"}],
+   "location": {"@type": "Place", "name": "Hall", "address": {"addressLocality": "Paris", "addressCountry": "FR"}}},
+  {"@type": "MusicEvent", "name": "No address", "startDate": "2027-09-01", "location": {"@type": "Place", "name": "Somewhere"}}
+]}
+</script>
+<script type="application/ld+json">{ this is not valid json </script>
+</head><body></body></html>
