@@ -1,5 +1,5 @@
 /* Service worker: app shell works offline; data is network-first with the last copy as fallback. */
-const VERSION = "v1";
+const VERSION = "v2";
 const SHELL_CACHE = `shell-${VERSION}`;
 const DATA_CACHE = "data";
 const FONT_CACHE = "fonts";

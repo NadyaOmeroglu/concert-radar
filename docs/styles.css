@@ -155,7 +155,7 @@ main { max-width: 640px; margin: 0 auto; padding: 0 var(--gutter); outline: none
 
 /* Month divider */
 .month {
-  font: 600 13px/1 var(--font-display); text-transform: uppercase; letter-spacing: .12em;
+  font: 800 12px/1 var(--font-display); text-transform: uppercase; letter-spacing: .12em;
   color: var(--ink-faint); margin: 22px 0 10px; display: flex; align-items: center; gap: 10px;
 }
 .month::after { content: ""; flex: 1; height: 1px; background: var(--border); }
@@ -288,10 +288,10 @@ dialog::backdrop { background: rgba(10, 5, 25, .55); backdrop-filter: blur(2px);
 .field legend { padding: 0; margin-bottom: 6px; }
 .field select {
   min-height: 48px; border-radius: 12px; border: 1px solid var(--border); background: var(--surface-2);
-  padding: 0 12px; font-weight: 600;
+  padding: 0 12px; font-weight: 700;
 }
 .checks { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 10px; }
-.checks label { display: flex; align-items: center; gap: 8px; min-height: 40px; font-weight: 600; }
+.checks label { display: flex; align-items: center; gap: 8px; min-height: 40px; font-weight: 700; }
 .checks input { width: 20px; height: 20px; accent-color: var(--accent); flex: none; }
 
 .toast {
