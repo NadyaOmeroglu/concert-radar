@@ -62,6 +62,7 @@ def run(root: Path = ROOT, now: datetime | None = None, sources: dict | None = N
     artists = [a for a in config.load_artists(artists_path) if a.active]
     all_names = [a.name for a in artists]
     if only_artist:
+        only_artist = " ".join(only_artist.split())
         artists = [a for a in artists if a.name.lower() == only_artist.lower()]
         if not artists:
             raise SystemExit(f"Artist not found in artists.yaml: {only_artist}")

@@ -1,0 +1,77 @@
+name: Collect concerts
+
+on:
+  schedule:
+    - cron: "17 6 * * *" # every day 06:17 UTC = 10:17 Dubai (not on the hour: GitHub is busiest then)
+  workflow_dispatch:
+    inputs:
+      artist:
+        description: "Only this artist (leave empty to check everyone)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write # save docs/data and found Ticketmaster ids
+  actions: write # keep the schedule enabled
+  pages: write
+  id-token: write
+
+concurrency:
+  group: collect
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+
+      - name: Collect concerts
+        env:
+          TICKETMASTER_API_KEY: ${{ secrets.TICKETMASTER_API_KEY }}
+          ARTIST: ${{ inputs.artist }}
+        run: |
+          if [ -n "$ARTIST" ]; then
+            python -m collector.main --artist "$ARTIST"
+          else
+            python -m collector.main
+          fi
+
+      - name: Send Telegram report
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python -m collector.notify_telegram
+
+      - name: Save data
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data config/artists.yaml
+          if git diff --cached --quiet; then echo "nothing to save"; exit 0; fi
+          git commit -m "Update concerts $(date -u +%Y-%m-%d)"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
+
+      # GitHub switches off schedules in public repositories after 60 days without activity.
+      # Re-enabling the workflow through the API on every run keeps the countdown from running out.
+      - name: Keep the schedule enabled
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/collect.yml/enable" || echo "::warning::could not refresh the schedule"
+
+  publish:
+    needs: collect
+    if: always()
+    uses: ./.github/workflows/pages.yml
