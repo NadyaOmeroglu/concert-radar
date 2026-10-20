@@ -1,0 +1,250 @@
+# Список артистов, которых отслеживает Concert Radar.
+# Как добавить артиста — см. README.md, раздел «Как добавить артиста».
+#
+# Поля:
+#   name               — имя, как оно будет показано в приложении
+#   aliases            — варианты написания для поиска и сопоставления
+#   official_tour_url  — страница с турами на официальном сайте (необязательно)
+#   ticketmaster_id    — заполняется автоматически, руками не трогать
+#   active             — false = временно не отслеживать
+
+artists:
+  - name: "Shawn Mendes"
+    aliases: ["Shawn Mendes"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Radiohead"
+    aliases: ["Radiohead"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Billie Eilish"
+    aliases: ["Billie Eilish"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Lady Gaga"
+    aliases: ["Lady Gaga"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Adele"
+    aliases: ["Adele"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Rihanna"
+    aliases: ["Rihanna"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Eminem"
+    aliases: ["Eminem"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Taylor Swift"
+    aliases: ["Taylor Swift"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Olivia Rodrigo"
+    aliases: ["Olivia Rodrigo"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "P!nk"
+    aliases: ["P!nk", "Pink"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Sia"
+    aliases: ["Sia"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "The Weeknd"
+    aliases: ["The Weeknd"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Bruno Mars"
+    aliases: ["Bruno Mars"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Ed Sheeran"
+    aliases: ["Ed Sheeran"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Beyoncé"
+    aliases: ["Beyoncé", "Beyonce"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Coldplay"
+    aliases: ["Coldplay"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Justin Bieber"
+    aliases: ["Justin Bieber"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Harry Styles"
+    aliases: ["Harry Styles"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Dua Lipa"
+    aliases: ["Dua Lipa"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Ariana Grande"
+    aliases: ["Ariana Grande"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Lana Del Rey"
+    aliases: ["Lana Del Rey"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Sabrina Carpenter"
+    aliases: ["Sabrina Carpenter"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Chappell Roan"
+    aliases: ["Chappell Roan"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Tate McRae"
+    aliases: ["Tate McRae"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Gracie Abrams"
+    aliases: ["Gracie Abrams"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Benson Boone"
+    aliases: ["Benson Boone"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "RAYE"
+    aliases: ["RAYE", "Raye"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Sombr"
+    aliases: ["Sombr", "sombr"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Imagine Dragons"
+    aliases: ["Imagine Dragons"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Arctic Monkeys"
+    aliases: ["Arctic Monkeys"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Muse"
+    aliases: ["Muse"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Twenty One Pilots"
+    aliases: ["Twenty One Pilots"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Linkin Park"
+    aliases: ["Linkin Park"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "OneRepublic"
+    aliases: ["OneRepublic"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Post Malone"
+    aliases: ["Post Malone"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Kendrick Lamar"
+    aliases: ["Kendrick Lamar"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Drake"
+    aliases: ["Drake"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "Bad Bunny"
+    aliases: ["Bad Bunny"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "ROSÉ"
+    aliases: ["ROSÉ", "Rosé", "Rose"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
+
+  - name: "BLACKPINK"
+    aliases: ["BLACKPINK"]
+    official_tour_url: null
+    ticketmaster_id: null
+    active: true
