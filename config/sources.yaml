@@ -1,0 +1,14 @@
+# Настройки источников данных. Обычно здесь ничего менять не нужно.
+# enabled: false — временно отключить источник.
+
+ticketmaster:
+  enabled: true
+
+platinumlist:
+  enabled: true
+  # Страница поиска; {query} заменяется на имя артиста.
+  # Адрес будет проверен при первом настоящем запуске на GitHub (Фаза 7).
+  search_url: "https://platinumlist.net/search?q={query}"
+
+official:
+  enabled: true
