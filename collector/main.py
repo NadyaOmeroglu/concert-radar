@@ -60,6 +60,7 @@ def run(root: Path = ROOT, now: datetime | None = None, sources: dict | None = N
     data_dir = root / "docs" / "data"
     artists_path = root / "config" / "artists.yaml"
     artists = [a for a in config.load_artists(artists_path) if a.active]
+    all_names = [a.name for a in artists]
     if only_artist:
         artists = [a for a in artists if a.name.lower() == only_artist.lower()]
         if not artists:
@@ -129,7 +130,7 @@ def run(root: Path = ROOT, now: datetime | None = None, sources: dict | None = N
         "lastRun": stamp,
         "lastRunArtist": only_artist,
         "sources": status,
-        "artistsTracked": len(artists),
+        "artists": all_names,
         "ambiguousArtists": ambiguous,
         "notFound": not_found,
         "errors": errors,

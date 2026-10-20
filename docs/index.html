@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Concert Radar</title>
+<meta name="description" content="Upcoming concerts of your favourite artists in the Schengen area and the Gulf">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="theme-color" content="#2A0F5C">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Concerts">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#upcoming" aria-label="Concert Radar, go to upcoming concerts">
+    <img src="icons/icon.svg" alt="" width="34" height="34">
+    <span>Concert Radar</span>
+  </a>
+  <span id="offline" class="offline" hidden>Offline · saved data</span>
+</header>
+
+<main id="app" tabindex="-1">
+  <p class="loading">Loading concerts…</p>
+</main>
+
+<nav class="tabbar" aria-label="Sections">
+  <a href="#upcoming" data-tab="upcoming">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 7v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7M4 7l1.5-3h13L20 7M9 12h6"/></svg>
+    <span>Upcoming</span>
+  </a>
+  <a href="#artists" data-tab="artists">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/></svg>
+    <span>Artists</span>
+  </a>
+  <a href="#new" data-tab="new">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/></svg>
+    <span>What’s new</span>
+    <b id="new-dot" class="dot" hidden></b>
+  </a>
+  <a href="#about" data-tab="about">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>
+    <span>About</span>
+  </a>
+</nav>
+
+<dialog id="filters" aria-labelledby="filters-title">
+  <form method="dialog" class="sheet">
+    <div class="sheet-head">
+      <h2 id="filters-title">Filters</h2>
+      <button type="button" class="link" id="filters-reset">Reset</button>
+    </div>
+    <label class="field">Country
+      <select id="f-country"></select>
+    </label>
+    <label class="field">City
+      <select id="f-city"></select>
+    </label>
+    <label class="field">Month
+      <select id="f-month"></select>
+    </label>
+    <fieldset class="field">
+      <legend>Artists</legend>
+      <div id="f-artists" class="checks"></div>
+    </fieldset>
+    <button class="btn primary wide" value="done">Show concerts</button>
+  </form>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>
