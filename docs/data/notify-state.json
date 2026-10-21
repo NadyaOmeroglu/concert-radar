@@ -1,0 +1,13 @@
+{
+ "saleAnnounced": {},
+ "saleReminded": {},
+ "sourceStatus": {
+  "ticketmaster": "ok",
+  "official": "skipped",
+  "platinumlist": "error"
+ },
+ "ambiguous": [
+  "ROSÉ"
+ ],
+ "lastNotified": "2026-10-21T19:02:50Z"
+}
