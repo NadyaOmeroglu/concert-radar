@@ -1,1 +1,295 @@
-{"lastRun": null, "sources": {}, "ambiguousArtists": [], "errors": []}
+{
+ "lastRun": "2026-10-21T12:01:17Z",
+ "sources": {
+  "ticketmaster": {
+   "status": "ok",
+   "events": 352,
+   "errors": 0,
+   "message": null
+  },
+  "official": {
+   "status": "skipped",
+   "events": 0,
+   "errors": 0,
+   "message": null
+  },
+  "platinumlist": {
+   "status": "ok",
+   "events": 0,
+   "errors": 0,
+   "message": null
+  }
+ },
+ "ambiguousArtists": [
+  {
+   "artist": "ROSÉ",
+   "source": "ticketmaster",
+   "candidates": [
+    {
+     "id": "K8vZ917hvO0",
+     "name": "ROSÉ",
+     "url": "https://www.ticketmaster.com/rose-tickets/artist/2963118",
+     "upcomingEvents": 0
+    },
+    {
+     "id": "K8vZ917_k80",
+     "name": "Rose",
+     "url": "https://www.ticketmaster.com/rose-tickets/artist/747494",
+     "upcomingEvents": 4
+    }
+   ]
+  }
+ ],
+ "errors": [],
+ "lastRunArtist": null,
+ "artists": [
+  "Shawn Mendes",
+  "Radiohead",
+  "Billie Eilish",
+  "Lady Gaga",
+  "Adele",
+  "Rihanna",
+  "Eminem",
+  "Taylor Swift",
+  "Olivia Rodrigo",
+  "P!nk",
+  "Sia",
+  "The Weeknd",
+  "Bruno Mars",
+  "Ed Sheeran",
+  "Beyoncé",
+  "Coldplay",
+  "Justin Bieber",
+  "Harry Styles",
+  "Dua Lipa",
+  "Ariana Grande",
+  "Lana Del Rey",
+  "Sabrina Carpenter",
+  "Chappell Roan",
+  "Tate McRae",
+  "Gracie Abrams",
+  "Benson Boone",
+  "RAYE",
+  "Sombr",
+  "Imagine Dragons",
+  "Arctic Monkeys",
+  "Muse",
+  "Twenty One Pilots",
+  "Linkin Park",
+  "OneRepublic",
+  "Post Malone",
+  "Kendrick Lamar",
+  "Drake",
+  "Bad Bunny",
+  "ROSÉ",
+  "BLACKPINK"
+ ],
+ "notFound": [],
+ "notes": [
+  {
+   "artist": "Shawn Mendes",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Shawn+Mendes not found (404)"
+  },
+  {
+   "artist": "Radiohead",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Radiohead not found (404)"
+  },
+  {
+   "artist": "Billie Eilish",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Billie+Eilish not found (404)"
+  },
+  {
+   "artist": "Lady Gaga",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Lady+Gaga not found (404)"
+  },
+  {
+   "artist": "Adele",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Adele not found (404)"
+  },
+  {
+   "artist": "Rihanna",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Rihanna not found (404)"
+  },
+  {
+   "artist": "Eminem",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Eminem not found (404)"
+  },
+  {
+   "artist": "Taylor Swift",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Taylor+Swift not found (404)"
+  },
+  {
+   "artist": "Olivia Rodrigo",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Olivia+Rodrigo not found (404)"
+  },
+  {
+   "artist": "P!nk",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=P%21nk not found (404)"
+  },
+  {
+   "artist": "Sia",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Sia not found (404)"
+  },
+  {
+   "artist": "The Weeknd",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=The+Weeknd not found (404)"
+  },
+  {
+   "artist": "Bruno Mars",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Bruno+Mars not found (404)"
+  },
+  {
+   "artist": "Ed Sheeran",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Ed+Sheeran not found (404)"
+  },
+  {
+   "artist": "Beyoncé",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Beyonc%C3%A9 not found (404)"
+  },
+  {
+   "artist": "Coldplay",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Coldplay not found (404)"
+  },
+  {
+   "artist": "Justin Bieber",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Justin+Bieber not found (404)"
+  },
+  {
+   "artist": "Harry Styles",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Harry+Styles not found (404)"
+  },
+  {
+   "artist": "Dua Lipa",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Dua+Lipa not found (404)"
+  },
+  {
+   "artist": "Ariana Grande",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Ariana+Grande not found (404)"
+  },
+  {
+   "artist": "Lana Del Rey",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Lana+Del+Rey not found (404)"
+  },
+  {
+   "artist": "Sabrina Carpenter",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Sabrina+Carpenter not found (404)"
+  },
+  {
+   "artist": "Chappell Roan",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Chappell+Roan not found (404)"
+  },
+  {
+   "artist": "Tate McRae",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Tate+McRae not found (404)"
+  },
+  {
+   "artist": "Gracie Abrams",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Gracie+Abrams not found (404)"
+  },
+  {
+   "artist": "Benson Boone",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Benson+Boone not found (404)"
+  },
+  {
+   "artist": "RAYE",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=RAYE not found (404)"
+  },
+  {
+   "artist": "Sombr",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Sombr not found (404)"
+  },
+  {
+   "artist": "Imagine Dragons",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Imagine+Dragons not found (404)"
+  },
+  {
+   "artist": "Arctic Monkeys",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Arctic+Monkeys not found (404)"
+  },
+  {
+   "artist": "Muse",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Muse not found (404)"
+  },
+  {
+   "artist": "Twenty One Pilots",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Twenty+One+Pilots not found (404)"
+  },
+  {
+   "artist": "Linkin Park",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Linkin+Park not found (404)"
+  },
+  {
+   "artist": "OneRepublic",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=OneRepublic not found (404)"
+  },
+  {
+   "artist": "Post Malone",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Post+Malone not found (404)"
+  },
+  {
+   "artist": "Kendrick Lamar",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Kendrick+Lamar not found (404)"
+  },
+  {
+   "artist": "Drake",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Drake not found (404)"
+  },
+  {
+   "artist": "Bad Bunny",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=Bad+Bunny not found (404)"
+  },
+  {
+   "artist": "ROSÉ",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=ROS%C3%89 not found (404)"
+  },
+  {
+   "artist": "BLACKPINK",
+   "source": "platinumlist",
+   "message": "https://platinumlist.net/search?q=BLACKPINK not found (404)"
+  }
+ ],
+ "rawEvents": 352,
+ "skippedNoLocation": 5,
+ "totalFailure": false,
+ "lastSuccess": "2026-10-21T12:01:17Z",
+ "eventsCount": 62
+}
