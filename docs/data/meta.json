@@ -1,5 +1,5 @@
 {
- "lastRun": "2026-10-21T19:01:34Z",
+ "lastRun": "2026-10-21T19:04:51Z",
  "sources": {
   "ticketmaster": {
    "status": "ok",
@@ -14,32 +14,13 @@
    "message": null
   },
   "platinumlist": {
-   "status": "error",
+   "status": "ok",
    "events": 0,
    "errors": 0,
-   "message": "listing pages contain no structured (JSON-LD) event data"
+   "message": null
   }
  },
- "ambiguousArtists": [
-  {
-   "artist": "ROSÉ",
-   "source": "ticketmaster",
-   "candidates": [
-    {
-     "id": "K8vZ917hvO0",
-     "name": "ROSÉ",
-     "url": "https://www.ticketmaster.com/rose-tickets/artist/2963118",
-     "upcomingEvents": 0
-    },
-    {
-     "id": "K8vZ917_k80",
-     "name": "Rose",
-     "url": "https://www.ticketmaster.com/rose-tickets/artist/747494",
-     "upcomingEvents": 4
-    }
-   ]
-  }
- ],
+ "ambiguousArtists": [],
  "errors": [],
  "lastRunArtist": null,
  "artists": [
@@ -81,215 +62,13 @@
   "Kendrick Lamar",
   "Drake",
   "Bad Bunny",
-  "ROSÉ",
   "BLACKPINK"
  ],
  "notFound": [],
- "notes": [
-  {
-   "artist": "Shawn Mendes",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Radiohead",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Billie Eilish",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Lady Gaga",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Adele",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Rihanna",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Eminem",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Taylor Swift",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Olivia Rodrigo",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "P!nk",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Sia",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "The Weeknd",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Bruno Mars",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Ed Sheeran",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Beyoncé",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Coldplay",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Justin Bieber",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Harry Styles",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Dua Lipa",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Ariana Grande",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Lana Del Rey",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Sabrina Carpenter",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Chappell Roan",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Tate McRae",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Gracie Abrams",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Benson Boone",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "RAYE",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Sombr",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Imagine Dragons",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Arctic Monkeys",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Muse",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Twenty One Pilots",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Linkin Park",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "OneRepublic",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Post Malone",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Kendrick Lamar",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Drake",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "Bad Bunny",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "ROSÉ",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  },
-  {
-   "artist": "BLACKPINK",
-   "source": "platinumlist",
-   "message": "listing pages contain no structured (JSON-LD) event data"
-  }
- ],
+ "notes": [],
  "rawEvents": 350,
  "skippedNoLocation": 5,
  "totalFailure": false,
- "lastSuccess": "2026-10-21T19:01:34Z",
+ "lastSuccess": "2026-10-21T19:04:51Z",
  "eventsCount": 62
 }

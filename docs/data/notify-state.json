@@ -4,10 +4,8 @@
  "sourceStatus": {
   "ticketmaster": "ok",
   "official": "skipped",
-  "platinumlist": "error"
+  "platinumlist": "ok"
  },
- "ambiguous": [
-  "ROSÉ"
- ],
- "lastNotified": "2026-10-21T19:02:50Z"
+ "ambiguous": [],
+ "lastNotified": "2026-10-21T19:06:22Z"
 }
