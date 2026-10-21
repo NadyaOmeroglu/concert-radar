@@ -142,3 +142,16 @@ def test_send_error_does_not_leak_token():
     with pytest.raises(RuntimeError) as exc:
         nt.send(["hello"], "TOKEN123", "42", session=FakeSession(400))
     assert "TOKEN123" not in str(exc.value) and "chat not found" in str(exc.value)
+
+
+def test_first_message_is_a_welcome_with_a_summary():
+    events = [ev("a", artist="Muse", city="Berlin", cc="DE", date="2026-11-18"),
+              ev("b", artist="Muse", city="Milano", cc="IT", date="2026-11-20"),
+              ev("c", artist="Sombr", city="Madrid", cc="ES", date="2026-12-01")]
+    msgs, _ = nt.build(meta(), changes(new=events), events, {}, TUE, first_time=True)
+    text = msgs[0]
+    assert "Concert Radar is connected" in text and "On the radar now: 3 concerts (2):" in text
+    assert "• <b>Muse</b> — 2 concerts, next Wed, 18 Nov 2026, Berlin 🇩🇪" in text
+    assert "New concerts" not in text  # not listed twice
+    empty, _ = nt.build(meta(), changes(), [], {}, TUE, first_time=True)
+    assert "None of your artists has shows" in empty[0]

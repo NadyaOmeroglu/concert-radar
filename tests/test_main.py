@@ -91,3 +91,15 @@ def test_api_key_never_reaches_meta(project, monkeypatch):
 
     main.run(project, now=NOW, sources={"ticketmaster": Leaky(), "platinumlist": CrashesForAdele()})
     assert "SECRET-TEST-KEY" not in (project / "docs" / "data" / "meta.json").read_text()
+
+
+def test_source_with_nothing_but_notes_is_reported_as_error(project):
+    from collector.models import SourceNote
+
+    class NoData:
+        def fetch(self, artist, regions):
+            raise SourceNote("listing pages contain no structured (JSON-LD) event data")
+
+    main.run(project, now=NOW, sources={"ticketmaster": Good(), "platinumlist": NoData()})
+    st = read(project, "meta.json")["sources"]["platinumlist"]
+    assert st["status"] == "error" and "no structured" in st["message"]

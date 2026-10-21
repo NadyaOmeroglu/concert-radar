@@ -142,7 +142,7 @@ def merge_events(events: list[dict]) -> list[dict]:
         groups.setdefault(e["id"], []).append(e)
     merged = []
     for group in groups.values():
-        group.sort(key=lambda e: SOURCE_PRIORITY.get(e["sources"][0], 99))
+        group.sort(key=lambda e: (SOURCE_PRIORITY.get(e["sources"][0], 99), is_add_on(e.get("title"))))
         base = dict(group[0])
         base["ticket_urls"], base["sources"], base["source_ids"] = [], [], []
         for e in group:
@@ -164,6 +164,15 @@ def merge_events(events: list[dict]) -> list[dict]:
         merged.append(base)
     merged.sort(key=lambda e: (e["date"], e["time"] or "", e["artist"]))
     return merged
+
+
+_ADD_ON = re.compile(
+    r"\b(box seat|suite|vip|hospitality|lounge|package|upgrade|premium|meet (and|&) greet|early entry)\b", re.IGNORECASE)
+
+
+def is_add_on(title: str | None) -> bool:
+    """VIP / box seat / hospitality listings: real tickets, but not the main sale page."""
+    return bool(title and _ADD_ON.search(title))
 
 
 _TRIBUTE = re.compile(

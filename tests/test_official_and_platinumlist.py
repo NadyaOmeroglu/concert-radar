@@ -50,22 +50,67 @@ def test_official_without_url_does_nothing(regions, coldplay):
     assert official_site.fetch(coldplay, regions, http=FakeHttp()) == []
 
 
-def test_platinumlist_parsing_filters_tributes_and_other_events(coldplay, regions):
-    http = FakeHttp({"search": FakeResponse(200, fixture_text("platinumlist_search.html"))})
-    events = platinumlist.fetch(coldplay, regions, http=http, search_url="https://pl.test/search?q={query}")
-    assert [e.city for e in events] == ["Dubai", "Sharjah"]  # region filter happens later
+LISTINGS = [{"url": "https://dubai.pl.test/concert", "city": "Dubai", "country": "AE"},
+            {"url": "https://muscat.pl.test/concert", "city": "Muscat", "country": "OM"}]
+
+
+@pytest.fixture(autouse=True)
+def fresh_platinumlist_cache():
+    platinumlist.reset_cache()
+    yield
+    platinumlist.reset_cache()
+
+
+def listing_http(page1, page2=None, muscat=None):
+    def dubai(url, params):
+        if url.endswith("page=2"):
+            return FakeResponse(200, page2 or "<html></html>")
+        return FakeResponse(200, page1)
+    return FakeHttp({"dubai.pl.test": dubai,
+                     "muscat.pl.test": muscat or FakeResponse(404, "")})
+
+
+def test_platinumlist_reads_city_listings_once_for_all_artists(coldplay, regions):
+    http = listing_http(fixture_text("platinumlist_search.html"))
+    events = platinumlist.fetch(coldplay, regions, http=http, listings=LISTINGS)
+    assert [e.city for e in events] == ["Dubai", "Sharjah"]  # tribute + safari skipped; region filter is later
     dubai = events[0]
     assert dubai.url == "https://dubai.platinumlist.net/event-tickets/test-coldplay"
     assert (dubai.price_min, dubai.currency, dubai.status) == (350.0, "AED", "onsale")
-    assert http.calls[0][0] == "https://pl.test/search?q=Coldplay"
+    calls = len(http.calls)
+    assert platinumlist.fetch(Artist(name="Adele", aliases=["Adele"]), regions, http=http, listings=LISTINGS) == []
+    assert len(http.calls) == calls  # second artist uses the pages already read
+
+
+def test_platinumlist_paging_and_city_fallback(coldplay, regions):
+    page2 = ('<script type="application/ld+json">{"@type": "MusicEvent", "name": "Coldplay - Encore night", '
+             '"startDate": "2027-02-01T20:00", "url": "https://dubai.platinumlist.net/event-tickets/x2"}</script>')
+    http = listing_http(fixture_text("platinumlist_search.html"), page2)
+    events = platinumlist.fetch(coldplay, regions, http=http, listings=LISTINGS)
+    encore = [e for e in events if e.date == "2027-02-01"][0]
+    assert (encore.city, encore.country) == ("Dubai", "AE")  # no address in JSON-LD -> the listing's city
+    urls = [u for u, _ in http.calls]
+    assert "https://dubai.pl.test/concert?page=2" in urls and "https://dubai.pl.test/concert?page=3" in urls
+
+
+def test_platinumlist_without_structured_data_is_a_note(coldplay, regions):
+    http = listing_http("<html><body>no json-ld</body></html>")
+    with pytest.raises(SourceNote, match="no structured"):
+        platinumlist.fetch(coldplay, regions, http=http, listings=LISTINGS)
 
 
 @pytest.mark.parametrize("http", [
-    FakeHttp({"search": FakeResponse(403, "<html>Just a moment...</html>")}),
+    FakeHttp({"pl.test": FakeResponse(403, "<html>Just a moment...</html>")}),
     FakeHttp(robots_allowed=False),
     FakeHttp(robots_allowed=RobotsUnreachable("could not read robots.txt")),
 ])
 def test_platinumlist_blocked_is_unavailable_not_bypassed(http, coldplay, regions):
     with pytest.raises(SourceUnavailable):
-        platinumlist.fetch(coldplay, regions, http=http, search_url="https://pl.test/search?q={query}")
+        platinumlist.fetch(coldplay, regions, http=http, listings=LISTINGS)
     assert len(http.calls) <= 1  # no retries with other tricks
+
+
+def test_platinumlist_artist_page(regions):
+    artist = Artist(name="Coldplay", aliases=["Coldplay"], platinumlist_url="https://pl.test/artist/coldplay")
+    http = FakeHttp({"artist/coldplay": FakeResponse(200, fixture_text("platinumlist_search.html"))})
+    assert [e.city for e in platinumlist.fetch(artist, regions, http=http)] == ["Dubai", "Sharjah"]

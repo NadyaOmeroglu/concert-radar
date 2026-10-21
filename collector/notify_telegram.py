@@ -101,7 +101,22 @@ def describe_change(c: dict) -> str:
     return f"{esc(f)} {esc(a if a is not None else '—')} → {esc(b if b is not None else '—')}"
 
 
-def build(meta: dict, changes: dict | None, events: list[dict], state: dict, now: datetime) -> tuple[list[str], dict]:
+def welcome(events: list[dict]) -> list[str]:
+    """First message ever: what is on the radar right now, one line per artist."""
+    by_artist: dict[str, list[dict]] = {}
+    for e in sorted(events, key=lambda x: (x.get("date") or "", x.get("time") or "")):
+        by_artist.setdefault(e["artist"], []).append(e)
+    lines = [f"• <b>{esc(a)}</b> — {len(evs)} concert{'s' if len(evs) > 1 else ''}, next {fmt_date(evs[0].get('date'))}, "
+             f"{esc(evs[0].get('city'))} {flag(evs[0].get('country'))}".rstrip()
+             for a, evs in sorted(by_artist.items(), key=lambda kv: kv[1][0].get("date") or "")]
+    head = ["", "👋 <b>Concert Radar is connected!</b> From now on you’ll hear about new concerts, changes and ticket sales."]
+    if not lines:
+        return head + ["None of your artists has shows in your regions right now."]
+    return head + section(f"On the radar now: {len(events)} concerts", lines)
+
+
+def build(meta: dict, changes: dict | None, events: list[dict], state: dict, now: datetime,
+          first_time: bool = False) -> tuple[list[str], dict]:
     """Returns (messages to send, new state). Pure function: no network, no files."""
     state = json.loads(json.dumps(state or {}))
     announced: dict = state.setdefault("saleAnnounced", {})
@@ -127,7 +142,10 @@ def build(meta: dict, changes: dict | None, events: list[dict], state: dict, now
                 reminded[e["id"]] = e["onsale_date"]
         new_lines.append(f"• <b>{esc(e.get('artist'))}</b> — {fmt_date(e.get('date'))}, {place(e)}{sale_txt}"
                          f"{link(first_url(e))}")
-    body += section("New concerts", new_lines)
+    if first_time:
+        body += welcome(events)  # covers the new concerts of this run too
+    else:
+        body += section("New concerts", new_lines)
 
     body += section("Changes", [
         f"• <b>{esc(e.get('artist'))}</b>, {esc(e.get('city'))}: " + "; ".join(describe_change(c) for c in e.get("changes") or [])
@@ -238,7 +256,7 @@ def main() -> int:
     now = datetime.now(timezone.utc)
     meta, changes, events = _read("meta.json", {}), _read("changes.json", None), _read("events.json", [])
     state = _read(STATE_FILE, {})
-    messages, new_state = build(meta, changes, events, state, now)
+    messages, new_state = build(meta, changes, events, state, now, first_time="lastNotified" not in state)
     token, chat_id = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip(), os.environ.get("TELEGRAM_CHAT_ID", "").strip()
     if not messages:
         log.info("nothing to report today")

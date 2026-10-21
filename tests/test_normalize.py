@@ -73,10 +73,20 @@ def test_dedup_merges_sources_with_priority(regions):
 def test_save_ticketmaster_ids_keeps_comments(tmp_path):
     path = tmp_path / "artists.yaml"
     path.write_text((ROOT / "config" / "artists.yaml").read_text(encoding="utf-8"), encoding="utf-8")
+    before = {a.name: a.ticketmaster_id for a in load_artists(path)}
     save_ticketmaster_ids(path, {"P!nk": "K8vZTEST"})
     text = path.read_text(encoding="utf-8")
     assert text.startswith("# ")
-    artists = {a.name: a for a in load_artists(path)}
-    assert artists["P!nk"].ticketmaster_id == "K8vZTEST"
-    assert artists["Sia"].ticketmaster_id is None
-    assert len(artists) == 40
+    after = {a.name: a.ticketmaster_id for a in load_artists(path)}
+    assert after.pop("P!nk") == "K8vZTEST"
+    before.pop("P!nk")
+    assert after == before  # nobody else touched
+    assert len(after) == 39
+
+
+def test_main_sale_page_comes_before_vip_packages(regions):
+    box = raw(url="https://t/box", title="Muse: Box seat in the Ticketmaster Suite", city="Berlin", country="DE")
+    main_sale = raw(url="https://t/main", title="Muse - The Wow! Signal Tour", city="Berlin", country="DE")
+    e = merge_events([to_event(box, regions), to_event(main_sale, regions)])[0]
+    assert e["title"] == "Muse - The Wow! Signal Tour"
+    assert [t["url"] for t in e["ticket_urls"]] == ["https://t/main", "https://t/box"]

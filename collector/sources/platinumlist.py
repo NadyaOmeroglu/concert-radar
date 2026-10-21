@@ -3,12 +3,14 @@
 There is no public API (only a partner/affiliate feed by agreement), so we read public pages:
 robots.txt is respected, at most one request every 2 seconds, and anti-bot pages are never bypassed.
 
-The search URL lives in config/sources.yaml; an artist can also have a direct `platinumlist_url`.
+Instead of one search per artist we read each city's concert listing once per run (a few pages)
+and pick out our artists' events. Listing pages are configured in config/sources.yaml; an artist
+can also have a direct `platinumlist_url` (e.g. an artist page).
 """
 from __future__ import annotations
 
+import logging
 from pathlib import Path
-from urllib.parse import quote_plus
 
 import yaml
 
@@ -17,10 +19,14 @@ from ..net import PoliteSession, RobotsUnreachable, looks_like_bot_challenge
 from ..normalize import looks_like_tribute
 from .jsonld import extract_events, to_raw_event
 
+log = logging.getLogger(__name__)
+
 NAME = "platinumlist"
 CONFIG = Path(__file__).resolve().parents[2] / "config" / "sources.yaml"
+DEFAULT_MAX_PAGES = 5
 
 _session: PoliteSession | None = None
+_cache: dict = {}  # listings already read during this run
 
 
 def _http() -> PoliteSession:
@@ -30,24 +36,20 @@ def _http() -> PoliteSession:
     return _session
 
 
-def _search_url() -> str | None:
+def reset_cache() -> None:
+    _cache.clear()
+
+
+def _config() -> dict:
     try:
         data = yaml.safe_load(CONFIG.read_text(encoding="utf-8")) or {}
     except FileNotFoundError:
-        return None
-    return ((data.get("platinumlist") or {}).get("search_url")) or None
+        return {}
+    return data.get("platinumlist") or {}
 
 
-def fetch(artist: Artist, regions: Regions, http=None, search_url: str | None = None) -> list[RawEvent]:
-    http = http or _http()
-    if artist.platinumlist_url:
-        url = artist.platinumlist_url
-    else:
-        template = search_url or _search_url()
-        if not template:
-            raise SourceNote("platinumlist.search_url is not configured")
-        url = template.format(query=quote_plus(artist.name))
-
+def _get_page(http, url: str):
+    """Returns the response, or None for a missing page. Raises SourceUnavailable when blocked."""
     try:
         allowed = http.allowed_by_robots(url)
     except RobotsUnreachable as exc:
@@ -58,13 +60,80 @@ def fetch(artist: Artist, regions: Regions, http=None, search_url: str | None = 
     if looks_like_bot_challenge(resp):
         raise SourceUnavailable(f"Platinumlist answered HTTP {resp.status_code} (anti-bot protection); not bypassing")
     if resp.status_code == 404:
-        raise SourceNote(f"{url} not found (404)")
+        return None
     if resp.status_code != 200:
-        raise RuntimeError(f"Platinumlist HTTP {resp.status_code}")
+        raise RuntimeError(f"Platinumlist HTTP {resp.status_code} for {url}")
+    return resp
+
+
+def _page_url(url: str, page: int) -> str:
+    return url if page == 1 else f"{url}{'&' if '?' in url else '?'}page={page}"
+
+
+def read_listings(http, listings: list[dict], max_pages: int) -> dict:
+    """All JSON-LD events from the listing pages: {"items": [(obj, listing, page_url)], "missing": [...]}."""
+    key = tuple(l["url"] for l in listings)
+    if key in _cache:
+        return _cache[key]
+    items, missing, seen = [], [], set()
+    for listing in listings:
+        for page in range(1, max_pages + 1):
+            url = _page_url(listing["url"], page)
+            resp = _get_page(http, url)
+            if resp is None:
+                if page == 1:
+                    missing.append(listing["url"])
+                break
+            fresh = 0
+            for obj in extract_events(resp.text):
+                ident = obj.get("url") or obj.get("@id") or (obj.get("name"), obj.get("startDate"))
+                if ident in seen:
+                    continue
+                seen.add(ident)
+                items.append((obj, listing, url))
+                fresh += 1
+            if not fresh:  # empty page or the site ignores ?page=
+                break
+    log.info("platinumlist: %d events on listing pages; missing pages: %s", len(items), missing or "none")
+    result = _cache[key] = {"items": items, "missing": missing}
+    return result
+
+
+def _from_artist_page(http, artist: Artist) -> list[RawEvent]:
+    resp = _get_page(http, artist.platinumlist_url)
+    if resp is None:
+        raise SourceNote(f"{artist.platinumlist_url} not found (404)")
+    events = [e for obj in extract_events(resp.text)
+              if (e := to_raw_event(obj, NAME, artist.name, artist.all_names(), artist.platinumlist_url,
+                                    require_name_in_title=True))]
+    return [e for e in events if not looks_like_tribute(e.title)]
+
+
+def fetch(artist: Artist, regions: Regions, http=None, listings: list[dict] | None = None,
+          max_pages: int | None = None) -> list[RawEvent]:
+    http = http or _http()
+    if artist.platinumlist_url:
+        return _from_artist_page(http, artist)
+
+    cfg = _config()
+    listings = listings if listings is not None else cfg.get("listings") or []
+    if not listings:
+        raise SourceNote("platinumlist.listings is not configured")
+    data = read_listings(http, listings, max_pages or cfg.get("max_pages") or DEFAULT_MAX_PAGES)
+    if len(data["missing"]) == len(listings):
+        raise SourceNote(f"no listing page could be opened (404): {', '.join(data['missing'])}")
+    if not data["items"]:
+        raise SourceNote("listing pages contain no structured (JSON-LD) event data")
 
     events = []
-    for obj in extract_events(resp.text):
-        ev = to_raw_event(obj, NAME, artist.name, artist.all_names(), url, require_name_in_title=True)
-        if ev and not looks_like_tribute(ev.title):
-            events.append(ev)
+    for obj, listing, page_url in data["items"]:
+        ev = to_raw_event(obj, NAME, artist.name, artist.all_names(), page_url, require_name_in_title=True)
+        if not ev or looks_like_tribute(ev.title):
+            continue
+        # The listing belongs to one city (e.g. dubai.platinumlist.net) — use it when the event has no address.
+        if not ev.city:
+            ev.city, ev.country = listing.get("city"), listing.get("country")
+        elif not ev.country and ev.city == listing.get("city"):
+            ev.country = listing.get("country")
+        events.append(ev)
     return events

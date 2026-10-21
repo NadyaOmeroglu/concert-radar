@@ -78,7 +78,7 @@ def run(root: Path = ROOT, now: datetime | None = None, sources: dict | None = N
 
     for name, module in sources.items():
         st = status[name] = {"status": "ok", "events": 0, "errors": 0, "message": None}
-        attempted = 0
+        attempted = noted = 0
         for artist in artists:
             if st["status"] == "unavailable":
                 break
@@ -101,6 +101,7 @@ def run(root: Path = ROOT, now: datetime | None = None, sources: dict | None = N
                 continue
             except SourceNote as exc:
                 notes.append({"artist": artist.name, "source": name, "message": redact(exc, tm_key)})
+                noted += 1
                 continue
             except Exception as exc:  # one broken artist/source must not stop the run
                 msg = redact(f"{type(exc).__name__}: {exc}", tm_key)
@@ -115,6 +116,10 @@ def run(root: Path = ROOT, now: datetime | None = None, sources: dict | None = N
             st["events"] += len(found)
         if st["status"] == "ok" and not attempted:
             st["status"] = "skipped"
+        elif st["status"] == "ok" and noted == attempted:
+            # nothing usable for anyone (e.g. pages without event data): say so instead of "ok"
+            st["status"] = "error"
+            st["message"] = next(n["message"] for n in reversed(notes) if n["source"] == name)
         elif st["status"] == "ok" and st["errors"]:
             st["status"] = "error" if st["errors"] == attempted else "partial"
 

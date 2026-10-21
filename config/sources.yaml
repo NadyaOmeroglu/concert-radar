@@ -6,9 +6,15 @@ ticketmaster:
 
 platinumlist:
   enabled: true
-  # Страница поиска; {query} заменяется на имя артиста.
-  # Адрес будет проверен при первом настоящем запуске на GitHub (Фаза 7).
-  search_url: "https://platinumlist.net/search?q={query}"
+  # Афиши концертов по городам. Сборщик читает каждую один раз за запуск (до max_pages страниц)
+  # и ищет в ней ваших артистов. Город и страна используются, если у события не указан адрес.
+  max_pages: 5
+  listings:
+    - { url: "https://dubai.platinumlist.net/concert", city: "Dubai", country: "AE" }
+    - { url: "https://abudhabi.platinumlist.net/concert", city: "Abu Dhabi", country: "AE" }
+    - { url: "https://riyadh.platinumlist.net/concert", city: "Riyadh", country: "SA" }
+    - { url: "https://jeddah.platinumlist.net/concert", city: "Jeddah", country: "SA" }
+    - { url: "https://muscat.platinumlist.net/concert", city: "Muscat", country: "OM" }
 
 official:
   enabled: true

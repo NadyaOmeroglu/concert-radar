@@ -143,7 +143,8 @@
 
   function ticketCard(e) {
     const p = parts(e.date);
-    const buys = (e.ticket_urls || []).filter((t) => safeUrl(t.url)).map((t, i) =>
+    const seenSource = new Set(); // one button per source; the first link is the main sale page
+    const buys = (e.ticket_urls || []).filter((t) => safeUrl(t.url) && !seenSource.has(t.source) && seenSource.add(t.source)).map((t, i) =>
       `<a class="btn ${i === 0 ? "primary" : ""}" href="${esc(t.url)}" target="_blank" rel="noopener">
          ${i === 0 ? "Buy tickets" : ""} ${i === 0 ? "· " : ""}${esc(SOURCE_LABEL[t.source] || t.source)}</a>`).join("");
     const sources = (e.sources || []).map((s) => SOURCE_LABEL[s] || s).join(", ");
