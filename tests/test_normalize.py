@@ -81,7 +81,7 @@ def test_save_ticketmaster_ids_keeps_comments(tmp_path):
     assert after.pop("P!nk") == "K8vZTEST"
     before.pop("P!nk")
     assert after == before  # nobody else touched
-    assert len(after) == 39
+    assert len(after) == 38
 
 
 def test_main_sale_page_comes_before_vip_packages(regions):

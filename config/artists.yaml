@@ -237,12 +237,6 @@ artists:
     ticketmaster_id: "K8vZ9174l1f"
     active: true
 
-  - name: "ROSÉ"
-    aliases: ["ROSÉ", "Rosé", "Rose"]
-    official_tour_url: null
-    ticketmaster_id: null
-    active: true
-
   - name: "BLACKPINK"
     aliases: ["BLACKPINK"]
     official_tour_url: null

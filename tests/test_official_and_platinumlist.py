@@ -114,3 +114,37 @@ def test_platinumlist_artist_page(regions):
     artist = Artist(name="Coldplay", aliases=["Coldplay"], platinumlist_url="https://pl.test/artist/coldplay")
     http = FakeHttp({"artist/coldplay": FakeResponse(200, fixture_text("platinumlist_search.html"))})
     assert [e.city for e in platinumlist.fetch(artist, regions, http=http)] == ["Dubai", "Sharjah"]
+
+
+LISTING_LINKS = """<html><body>
+<a href="/event-tickets/101/coldplay-live-in-dubai">Coldplay Live in Dubai</a>
+<a href="https://dubai.platinumlist.net/event-tickets/102/desert-safari?ref=x">Desert Safari</a>
+<a href="/event-tickets/103/a-tribute-to-coldplay">Candlelight: A Tribute to Coldplay</a>
+<a href="/about">About us</a></body></html>"""
+EVENT_PAGE = """<script type="application/ld+json">{"@type": "MusicEvent", "name": "Coldplay Live in Dubai",
+ "startDate": "2027-01-15T20:00:00+04:00",
+ "location": {"@type": "Place", "name": "Coca-Cola Arena", "address": {"addressLocality": "Dubai", "addressCountry": "AE"}}}
+</script>"""
+
+
+def test_platinumlist_follows_only_matching_event_links(coldplay, regions):
+    http = listing_http(LISTING_LINKS)
+    http.routes = {"/event-tickets/101/": FakeResponse(200, EVENT_PAGE),
+                   "/event-tickets/103/": FakeResponse(200, EVENT_PAGE.replace("Coldplay Live", "Candlelight: A Tribute to Coldplay")),
+                   **http.routes}
+    events = platinumlist.fetch(coldplay, regions, http=http, listings=LISTINGS)
+    assert [(e.city, e.venue, e.date) for e in events] == [("Dubai", "Coca-Cola Arena", "2027-01-15")]
+    assert events[0].url == "https://dubai.pl.test/event-tickets/101/coldplay-live-in-dubai"
+    opened = [u for u, _ in http.calls if "/event-tickets/" in u]
+    assert opened == ["https://dubai.pl.test/event-tickets/101/coldplay-live-in-dubai"]  # no safari, no tribute
+    # another artist with no matching link: no extra requests, no events
+    before = len(http.calls)
+    assert platinumlist.fetch(Artist(name="Adele", aliases=["Adele"]), regions, http=http, listings=LISTINGS) == []
+    assert len(http.calls) == before
+
+
+def test_platinumlist_event_page_without_data_is_a_note(coldplay, regions):
+    http = listing_http(LISTING_LINKS)
+    http.routes = {"/event-tickets/": FakeResponse(200, "<html>no data</html>"), **http.routes}
+    with pytest.raises(SourceNote, match="event page has no structured"):
+        platinumlist.fetch(coldplay, regions, http=http, listings=LISTINGS)

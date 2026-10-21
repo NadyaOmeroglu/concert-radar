@@ -167,7 +167,7 @@ def merge_events(events: list[dict]) -> list[dict]:
 
 
 _ADD_ON = re.compile(
-    r"\b(box seat|suite|vip|hospitality|lounge|package|upgrade|premium|meet (and|&) greet|early entry)\b", re.IGNORECASE)
+    r"\b(box seat|suite|logen-seat|loge|logen|vip|hospitality|lounge|package|upgrade|premium|meet (and|&) greet|early entry)\b", re.IGNORECASE)
 
 
 def is_add_on(title: str | None) -> bool:

@@ -18,7 +18,7 @@ def test_adds_artist_with_tour_page(artists_file):
     assert added.name == "Florence + the Machine"
     assert added.official_tour_url == "https://example.org/tour"
     assert added.ticketmaster_id is None and added.active
-    assert len(load_artists(artists_file)) == 41
+    assert len(load_artists(artists_file)) == 40
     assert artists_file.read_text(encoding="utf-8").startswith("# ")  # comments kept
 
 
@@ -29,7 +29,7 @@ def test_tricky_names_stay_strings(artists_file):
     assert names[-2:] == ["NO", 'Guns N\' Roses: "Live"']
 
 
-@pytest.mark.parametrize("name", ["Coldplay", "coldplay", "Pink", "Beyonce", "Rosé"])
+@pytest.mark.parametrize("name", ["Coldplay", "coldplay", "Pink", "Beyonce", "blackpink"])
 def test_duplicates_are_rejected(artists_file, name):
     with pytest.raises(ValueError, match="already"):
         add_artist(artists_file, name)
