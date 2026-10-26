@@ -1,5 +1,7 @@
 {
- "saleAnnounced": {},
+ "saleAnnounced": {
+  "0776729a7f9cd0b951e04eaaa15d9a5fc182b610": "2026-10-31T10:00:00Z"
+ },
  "saleReminded": {},
  "sourceStatus": {
   "ticketmaster": "ok",
@@ -7,5 +9,5 @@
   "platinumlist": "ok"
  },
  "ambiguous": [],
- "lastNotified": "2026-10-25T11:45:42Z"
+ "lastNotified": "2026-10-26T13:17:51Z"
 }
