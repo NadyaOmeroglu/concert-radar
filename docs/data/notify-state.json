@@ -1,6 +1,9 @@
 {
  "saleAnnounced": {
-  "0776729a7f9cd0b951e04eaaa15d9a5fc182b610": "2026-10-31T10:00:00Z"
+  "0776729a7f9cd0b951e04eaaa15d9a5fc182b610": "2026-10-31T10:00:00Z",
+  "bc989220614ee9ca01df19eb1bd84e26d471eaff": "2026-10-30T09:00:00Z",
+  "2a2c68d4426eae953a41c90a2723233a1c9c0143": "2026-10-30T09:00:00Z",
+  "cb854dac00e00fbf0e413806335212424e3f3be0": "2026-10-30T09:00:00Z"
  },
  "saleReminded": {},
  "sourceStatus": {
@@ -9,5 +12,5 @@
   "platinumlist": "ok"
  },
  "ambiguous": [],
- "lastNotified": "2026-10-27T12:25:39Z"
+ "lastNotified": "2026-10-28T13:12:17Z"
 }

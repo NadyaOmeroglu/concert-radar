@@ -1,6 +1,46 @@
 {
- "generatedAt": "2026-10-27T12:24:20Z",
- "new": [],
+ "generatedAt": "2026-10-28T13:10:55Z",
+ "new": [
+  {
+   "id": "bc989220614ee9ca01df19eb1bd84e26d471eaff",
+   "artist": "Muse",
+   "title": "Rock Werchter 2027 | One-day Friday- Backyard",
+   "date": "2027-07-02",
+   "time": null,
+   "city": "Werchter",
+   "country": "BE",
+   "venue": "Festivalpark Werchter",
+   "status": "offsale",
+   "onsale_date": "2026-10-30T09:00:00Z",
+   "url": "https://www.ticketmaster.be/event/rock-werchter-2027-%7C-one-day-friday-backyard-tickets/1574918925"
+  },
+  {
+   "id": "2a2c68d4426eae953a41c90a2723233a1c9c0143",
+   "artist": "Muse",
+   "title": "Rock Werchter 2027 | Four-day ticket",
+   "date": "2027-07-04",
+   "time": null,
+   "city": "Werchter",
+   "country": "BE",
+   "venue": "Festivalpark Werchter",
+   "status": "offsale",
+   "onsale_date": "2026-10-30T09:00:00Z",
+   "url": "https://www.ticketmaster.be/event/rock-werchter-2027-%7C-four-day-ticket-tickets/1418758397"
+  },
+  {
+   "id": "cb854dac00e00fbf0e413806335212424e3f3be0",
+   "artist": "Sombr",
+   "title": "Rock Werchter 2027 | One-day Sunday- Backyard",
+   "date": "2027-07-04",
+   "time": null,
+   "city": "Werchter",
+   "country": "BE",
+   "venue": "Festivalpark Werchter",
+   "status": "offsale",
+   "onsale_date": "2026-10-30T09:00:00Z",
+   "url": "https://www.ticketmaster.be/event/rock-werchter-2027-%7C-one-day-sunday-backyard-tickets/2088837827"
+  }
+ ],
  "changed": [],
  "onsale_soon": [
   {
@@ -15,6 +55,45 @@
    "status": "offsale",
    "onsale_date": "2026-10-31T10:00:00Z",
    "url": "https://www.ticketmaster.nl/event/pinkpop-2027-%7C-friday-tickets/1090844034?language=en-us"
+  },
+  {
+   "id": "bc989220614ee9ca01df19eb1bd84e26d471eaff",
+   "artist": "Muse",
+   "title": "Rock Werchter 2027 | One-day Friday- Backyard",
+   "date": "2027-07-02",
+   "time": null,
+   "city": "Werchter",
+   "country": "BE",
+   "venue": "Festivalpark Werchter",
+   "status": "offsale",
+   "onsale_date": "2026-10-30T09:00:00Z",
+   "url": "https://www.ticketmaster.be/event/rock-werchter-2027-%7C-one-day-friday-backyard-tickets/1574918925"
+  },
+  {
+   "id": "2a2c68d4426eae953a41c90a2723233a1c9c0143",
+   "artist": "Muse",
+   "title": "Rock Werchter 2027 | Four-day ticket",
+   "date": "2027-07-04",
+   "time": null,
+   "city": "Werchter",
+   "country": "BE",
+   "venue": "Festivalpark Werchter",
+   "status": "offsale",
+   "onsale_date": "2026-10-30T09:00:00Z",
+   "url": "https://www.ticketmaster.be/event/rock-werchter-2027-%7C-four-day-ticket-tickets/1418758397"
+  },
+  {
+   "id": "cb854dac00e00fbf0e413806335212424e3f3be0",
+   "artist": "Sombr",
+   "title": "Rock Werchter 2027 | One-day Sunday- Backyard",
+   "date": "2027-07-04",
+   "time": null,
+   "city": "Werchter",
+   "country": "BE",
+   "venue": "Festivalpark Werchter",
+   "status": "offsale",
+   "onsale_date": "2026-10-30T09:00:00Z",
+   "url": "https://www.ticketmaster.be/event/rock-werchter-2027-%7C-one-day-sunday-backyard-tickets/2088837827"
   }
  ],
  "removed": []
