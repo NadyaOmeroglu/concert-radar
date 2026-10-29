@@ -5,12 +5,16 @@
   "2a2c68d4426eae953a41c90a2723233a1c9c0143": "2026-10-30T09:00:00Z",
   "cb854dac00e00fbf0e413806335212424e3f3be0": "2026-10-30T09:00:00Z"
  },
- "saleReminded": {},
+ "saleReminded": {
+  "bc989220614ee9ca01df19eb1bd84e26d471eaff": "2026-10-30T09:00:00Z",
+  "2a2c68d4426eae953a41c90a2723233a1c9c0143": "2026-10-30T09:00:00Z",
+  "cb854dac00e00fbf0e413806335212424e3f3be0": "2026-10-30T09:00:00Z"
+ },
  "sourceStatus": {
   "ticketmaster": "ok",
   "official": "skipped",
   "platinumlist": "ok"
  },
  "ambiguous": [],
- "lastNotified": "2026-10-28T13:12:17Z"
+ "lastNotified": "2026-10-29T13:18:17Z"
 }
