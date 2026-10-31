@@ -1,72 +1,7 @@
 {
- "generatedAt": "2026-10-30T13:09:09Z",
+ "generatedAt": "2026-10-31T12:45:10Z",
  "new": [],
  "changed": [
-  {
-   "id": "bc989220614ee9ca01df19eb1bd84e26d471eaff",
-   "artist": "Muse",
-   "title": "Rock Werchter 2027 | One-day Backyard Friday",
-   "date": "2027-07-02",
-   "time": null,
-   "city": "Werchter",
-   "country": "BE",
-   "venue": "Festivalpark Werchter",
-   "status": "onsale",
-   "onsale_date": "2026-10-30T09:00:00Z",
-   "url": "https://www.ticketmaster.be/event/rock-werchter-2027-%7C-one-day-backyard-friday-tickets/1574918925",
-   "changes": [
-    {
-     "field": "status",
-     "from": "offsale",
-     "to": "onsale",
-     "at": "2026-10-30T13:09:09Z"
-    }
-   ]
-  },
-  {
-   "id": "2a2c68d4426eae953a41c90a2723233a1c9c0143",
-   "artist": "Muse",
-   "title": "Rock Werchter 2027 | Four-day ticket",
-   "date": "2027-07-04",
-   "time": null,
-   "city": "Werchter",
-   "country": "BE",
-   "venue": "Festivalpark Werchter",
-   "status": "onsale",
-   "onsale_date": "2026-10-30T09:00:00Z",
-   "url": "https://www.ticketmaster.be/event/rock-werchter-2027-%7C-four-day-ticket-tickets/1418758397",
-   "changes": [
-    {
-     "field": "status",
-     "from": "offsale",
-     "to": "onsale",
-     "at": "2026-10-30T13:09:09Z"
-    }
-   ]
-  },
-  {
-   "id": "cb854dac00e00fbf0e413806335212424e3f3be0",
-   "artist": "Sombr",
-   "title": "Rock Werchter 2027 | One-day Backyard Sunday",
-   "date": "2027-07-04",
-   "time": null,
-   "city": "Werchter",
-   "country": "BE",
-   "venue": "Festivalpark Werchter",
-   "status": "onsale",
-   "onsale_date": "2026-10-30T09:00:00Z",
-   "url": "https://www.ticketmaster.be/event/rock-werchter-2027-%7C-one-day-backyard-sunday-tickets/2088837827",
-   "changes": [
-    {
-     "field": "status",
-     "from": "offsale",
-     "to": "onsale",
-     "at": "2026-10-30T13:09:09Z"
-    }
-   ]
-  }
- ],
- "onsale_soon": [
   {
    "id": "0776729a7f9cd0b951e04eaaa15d9a5fc182b610",
    "artist": "RAYE",
@@ -76,10 +11,19 @@
    "city": "Landgraaf",
    "country": "NL",
    "venue": "Megaland",
-   "status": "offsale",
+   "status": "onsale",
    "onsale_date": "2026-10-31T10:00:00Z",
-   "url": "https://www.ticketmaster.nl/event/pinkpop-2027-%7C-friday-tickets/1090844034?language=en-us"
+   "url": "https://www.ticketmaster.nl/event/pinkpop-2027-%7C-friday-tickets/1090844034?language=en-us",
+   "changes": [
+    {
+     "field": "status",
+     "from": "offsale",
+     "to": "onsale",
+     "at": "2026-10-31T12:45:10Z"
+    }
+   ]
   }
  ],
+ "onsale_soon": [],
  "removed": []
 }
