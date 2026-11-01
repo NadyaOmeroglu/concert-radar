@@ -1,29 +1,7 @@
 {
- "generatedAt": "2026-10-31T12:45:10Z",
+ "generatedAt": "2026-11-01T13:35:52Z",
  "new": [],
- "changed": [
-  {
-   "id": "0776729a7f9cd0b951e04eaaa15d9a5fc182b610",
-   "artist": "RAYE",
-   "title": "Pinkpop 2027 | FRIDAY",
-   "date": "2027-06-18",
-   "time": "12:00",
-   "city": "Landgraaf",
-   "country": "NL",
-   "venue": "Megaland",
-   "status": "onsale",
-   "onsale_date": "2026-10-31T10:00:00Z",
-   "url": "https://www.ticketmaster.nl/event/pinkpop-2027-%7C-friday-tickets/1090844034?language=en-us",
-   "changes": [
-    {
-     "field": "status",
-     "from": "offsale",
-     "to": "onsale",
-     "at": "2026-10-31T12:45:10Z"
-    }
-   ]
-  }
- ],
+ "changed": [],
  "onsale_soon": [],
  "removed": []
 }
