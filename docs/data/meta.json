@@ -1,5 +1,5 @@
 {
- "lastRun": "2026-11-04T14:42:07Z",
+ "lastRun": "2026-11-05T14:46:38Z",
  "sources": {
   "ticketmaster": {
    "status": "ok",
@@ -69,6 +69,6 @@
  "rawEvents": 337,
  "skippedNoLocation": 5,
  "totalFailure": false,
- "lastSuccess": "2026-11-04T14:42:07Z",
+ "lastSuccess": "2026-11-05T14:46:38Z",
  "eventsCount": 66
 }
