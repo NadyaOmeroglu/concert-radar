@@ -1,7 +1,35 @@
 {
- "generatedAt": "2026-11-08T13:36:51Z",
- "new": [],
+ "generatedAt": "2026-11-09T16:36:06Z",
+ "new": [
+  {
+   "id": "db934c377029b5634ca3259006accaace012761b",
+   "artist": "RAYE",
+   "title": "Bergen Calling: RAYE",
+   "date": "2027-06-28",
+   "time": "18:00",
+   "city": "Bergen",
+   "country": "NO",
+   "venue": "Bergenhus Festning - Koengen",
+   "status": "offsale",
+   "onsale_date": "2026-11-13T09:00:00Z",
+   "url": "https://www.ticketmaster.no/event/bergen-calling-raye-tickets/1338582260?language=en-us"
+  }
+ ],
  "changed": [],
- "onsale_soon": [],
+ "onsale_soon": [
+  {
+   "id": "db934c377029b5634ca3259006accaace012761b",
+   "artist": "RAYE",
+   "title": "Bergen Calling: RAYE",
+   "date": "2027-06-28",
+   "time": "18:00",
+   "city": "Bergen",
+   "country": "NO",
+   "venue": "Bergenhus Festning - Koengen",
+   "status": "offsale",
+   "onsale_date": "2026-11-13T09:00:00Z",
+   "url": "https://www.ticketmaster.no/event/bergen-calling-raye-tickets/1338582260?language=en-us"
+  }
+ ],
  "removed": []
 }
