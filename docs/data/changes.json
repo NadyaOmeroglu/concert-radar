@@ -1,8 +1,7 @@
 {
- "generatedAt": "2026-11-12T15:25:39Z",
+ "generatedAt": "2026-11-13T14:42:16Z",
  "new": [],
- "changed": [],
- "onsale_soon": [
+ "changed": [
   {
    "id": "db934c377029b5634ca3259006accaace012761b",
    "artist": "RAYE",
@@ -12,10 +11,19 @@
    "city": "Bergen",
    "country": "NO",
    "venue": "Bergenhus Festning - Koengen",
-   "status": "offsale",
+   "status": "onsale",
    "onsale_date": "2026-11-13T09:00:00Z",
-   "url": "https://www.ticketmaster.no/event/bergen-calling-raye-tickets/1338582260?language=en-us"
+   "url": "https://www.ticketmaster.no/event/bergen-calling-raye-tickets/1338582260?language=en-us",
+   "changes": [
+    {
+     "field": "status",
+     "from": "offsale",
+     "to": "onsale",
+     "at": "2026-11-13T14:42:16Z"
+    }
+   ]
   }
  ],
+ "onsale_soon": [],
  "removed": []
 }
