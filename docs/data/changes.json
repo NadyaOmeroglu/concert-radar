@@ -1,7 +1,29 @@
 {
- "generatedAt": "2026-11-18T15:48:19Z",
+ "generatedAt": "2026-11-19T15:52:45Z",
  "new": [],
- "changed": [],
+ "changed": [
+  {
+   "id": "9d324899a8e6a267c3b5e2859a8550f70c74e84a",
+   "artist": "Muse",
+   "title": "Muse - The Wow! Signal Europa Tour",
+   "date": "2026-11-20",
+   "time": "20:30",
+   "city": "Milano",
+   "country": "IT",
+   "venue": "Unipol Dome",
+   "status": "offsale",
+   "onsale_date": "2026-06-19T08:00:00Z",
+   "url": "https://www.ticketmaster.it/biglietti/muse-the-wow-signal-europa-tour-milano-20-11-2026/event/nkjzd7z38ebl",
+   "changes": [
+    {
+     "field": "status",
+     "from": "onsale",
+     "to": "offsale",
+     "at": "2026-11-19T15:52:45Z"
+    }
+   ]
+  }
+ ],
  "onsale_soon": [],
  "removed": []
 }

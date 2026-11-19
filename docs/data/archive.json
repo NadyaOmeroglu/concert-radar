@@ -1,1 +1,38 @@
-[]
+[
+ {
+  "id": "40efb38e16ce05cd82b8953a8c1f3be63cb289b1",
+  "artist": "Muse",
+  "title": "Muse - The Wow! Signal Europa Tour",
+  "date": "2026-11-18",
+  "time": "19:30",
+  "timezone": "Europe/Berlin",
+  "city": "Berlin",
+  "country": "DE",
+  "venue": "Uber Arena",
+  "status": "onsale",
+  "onsale_date": "2026-06-19T08:00:00Z",
+  "price_min": null,
+  "currency": null,
+  "ticket_urls": [
+   {
+    "source": "ticketmaster",
+    "url": "https://www.ticketmaster.de/event/muse-the-wow-signal-europa-tour-tickets/1461302506?language=en-us"
+   },
+   {
+    "source": "ticketmaster",
+    "url": "https://www.ticketmaster.de/event/muse-the-wow-signal-europa-tour-%7C-box-seat-in-the-ticketmaster-suite-tickets/1197716852?language=en-us"
+   }
+  ],
+  "sources": [
+   "ticketmaster"
+  ],
+  "source_ids": [
+   "ticketmaster:Z698xZC2Z16vo-Gefk",
+   "ticketmaster:Z698xZC2Z16vk9jp-3"
+  ],
+  "last_seen": "2026-11-18T15:48:19Z",
+  "missing_runs": 0,
+  "first_seen": "2026-10-21T12:01:17Z",
+  "changed": []
+ }
+]
