@@ -1,46 +1,25 @@
 {
- "generatedAt": "2026-11-23T18:26:26Z",
+ "generatedAt": "2026-11-24T17:55:12Z",
  "new": [],
  "changed": [
   {
-   "id": "3dfbf5b70d84c7b6b87c350c7d5f76cf82d75188",
+   "id": "55360f34a2dbf32f63182e8e8bf960f216468968",
    "artist": "Muse",
    "title": "Muse - The Wow! Signal Europa Tour",
-   "date": "2026-11-29",
+   "date": "2026-11-24",
    "time": "19:30",
-   "city": "Amsterdam",
-   "country": "NL",
-   "venue": "Ziggo Dome",
-   "status": "onsale",
+   "city": "Düsseldorf",
+   "country": "DE",
+   "venue": null,
+   "status": "offsale",
    "onsale_date": "2026-06-19T08:00:00Z",
-   "url": "https://www.ticketmaster.nl/event/muse-the-wow-signal-europa-tour-tickets/305084425?language=en-us",
+   "url": "https://www.ticketmaster.de/event/muse-the-wow-signal-europa-tour-tickets/738280896?language=en-us",
    "changes": [
     {
-     "field": "time",
-     "from": "20:00",
-     "to": "19:30",
-     "at": "2026-11-23T18:26:26Z"
-    }
-   ]
-  },
-  {
-   "id": "4fa6ed227b3f267a032d84fd613b6fab47b65a6d",
-   "artist": "Muse",
-   "title": "Muse - The Wow! Signal Europa Tour",
-   "date": "2026-11-30",
-   "time": "19:30",
-   "city": "Amsterdam",
-   "country": "NL",
-   "venue": "Ziggo Dome",
-   "status": "onsale",
-   "onsale_date": "2026-06-19T08:00:00Z",
-   "url": "https://www.ticketmaster.nl/event/muse-the-wow-signal-europa-tour-tickets/1900870058?language=en-us",
-   "changes": [
-    {
-     "field": "time",
-     "from": "20:00",
-     "to": "19:30",
-     "at": "2026-11-23T18:26:26Z"
+     "field": "status",
+     "from": "onsale",
+     "to": "offsale",
+     "at": "2026-11-24T17:55:12Z"
     }
    ]
   }
