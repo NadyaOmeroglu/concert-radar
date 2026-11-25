@@ -1,43 +1,5 @@
 [
  {
-  "id": "55360f34a2dbf32f63182e8e8bf960f216468968",
-  "artist": "Muse",
-  "title": "Muse - The Wow! Signal Europa Tour",
-  "date": "2026-11-24",
-  "time": "19:30",
-  "timezone": "Europe/Berlin",
-  "city": "Düsseldorf",
-  "country": "DE",
-  "venue": null,
-  "status": "offsale",
-  "onsale_date": "2026-06-19T08:00:00Z",
-  "price_min": null,
-  "currency": null,
-  "ticket_urls": [
-   {
-    "source": "ticketmaster",
-    "url": "https://www.ticketmaster.de/event/muse-the-wow-signal-europa-tour-tickets/738280896?language=en-us"
-   }
-  ],
-  "sources": [
-   "ticketmaster"
-  ],
-  "source_ids": [
-   "ticketmaster:Z698xZC2Z1kjz1Zxp"
-  ],
-  "last_seen": "2026-11-24T17:55:12Z",
-  "missing_runs": 0,
-  "first_seen": "2026-10-21T12:01:17Z",
-  "changed": [
-   {
-    "field": "status",
-    "from": "onsale",
-    "to": "offsale",
-    "at": "2026-11-24T17:55:12Z"
-   }
-  ]
- },
- {
   "id": "21eff0e9b41e7089a69b809b313958a14dea44b9",
   "artist": "Muse",
   "title": "Muse - The Wow! Signal Europa Tour",
@@ -47,7 +9,7 @@
   "city": "Düsseldorf",
   "country": "DE",
   "venue": null,
-  "status": "onsale",
+  "status": "offsale",
   "onsale_date": "2026-06-19T08:00:00Z",
   "price_min": null,
   "currency": null,
@@ -63,10 +25,17 @@
   "source_ids": [
    "ticketmaster:Z698xZC2Z16eed8NGk"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
-  "changed": []
+  "changed": [
+   {
+    "field": "status",
+    "from": "onsale",
+    "to": "offsale",
+    "at": "2026-11-25T17:23:43Z"
+   }
+  ]
  },
  {
   "id": "3dfbf5b70d84c7b6b87c350c7d5f76cf82d75188",
@@ -99,7 +68,7 @@
    "ticketmaster:Z698xZbpZ1kGAe78P",
    "ticketmaster:Z698xZbpZ1ka0FkF4"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": [
@@ -142,7 +111,7 @@
    "ticketmaster:Z698xZbpZ16v0Z-Yvb",
    "ticketmaster:Z698xZbpZ1kx3A7qo"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": [
@@ -180,7 +149,7 @@
   "source_ids": [
    "ticketmaster:Z698xZ52Z16vb3OOC_"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -211,7 +180,7 @@
   "source_ids": [
    "ticketmaster:Z698xZu3Z1kaIQded"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -242,7 +211,7 @@
   "source_ids": [
    "ticketmaster:Z698xZu3Z16v7P4EjA"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -273,7 +242,7 @@
   "source_ids": [
    "ticketmaster:Z698xZ2qZ16vjs7s8N"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": [
@@ -311,7 +280,7 @@
   "source_ids": [
    "ticketmaster:Z698xZ2qZ1kCb1fbk"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": [
@@ -349,7 +318,7 @@
   "source_ids": [
    "ticketmaster:Z698xZ2qZ16vovAbug"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": [
@@ -387,7 +356,7 @@
   "source_ids": [
    "ticketmaster:Z698xZ2qZ1k_Kr6f0"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": [
@@ -425,7 +394,7 @@
   "source_ids": [
    "ticketmaster:Z698xZq2Z16vGoZw_b"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -456,7 +425,7 @@
   "source_ids": [
    "ticketmaster:Z698xZq2Z16ee7uS48"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -492,7 +461,7 @@
    "ticketmaster:Z698xZbpZ16vawas-e",
    "ticketmaster:Z698xZbpZ16vZYuoj3"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -528,7 +497,7 @@
    "ticketmaster:Z698xZbpZ1kk7AJpa",
    "ticketmaster:Z698xZbpZ1kvSaev4"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -564,7 +533,7 @@
    "ticketmaster:Z698xZbpZ16v1ZF-Za",
    "ticketmaster:Z698xZbpZ1kf0u4po"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -600,7 +569,7 @@
    "ticketmaster:Z698xZbpZ16v_8bAGM",
    "ticketmaster:Z698xZbpZ1kFg8wCd"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -631,7 +600,7 @@
   "source_ids": [
    "ticketmaster:Z698xZC2Z1kfYG9AO"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -662,7 +631,7 @@
   "source_ids": [
    "ticketmaster:Z698xZC2Z16vuw_9J8"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -693,7 +662,7 @@
   "source_ids": [
    "ticketmaster:Z698xZG2Z1k_p3F_b"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -724,7 +693,7 @@
   "source_ids": [
    "ticketmaster:Z698xZG2Z1k4VOfa4"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -755,7 +724,7 @@
   "source_ids": [
    "ticketmaster:Z698xZ2qZ1kf4Gb0b"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -786,7 +755,7 @@
   "source_ids": [
    "ticketmaster:Z698xZ2qZ1k8UZwJ6"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -817,7 +786,7 @@
   "source_ids": [
    "ticketmaster:Z698xZ2qZ16eZxvPe7"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -848,7 +817,7 @@
   "source_ids": [
    "ticketmaster:Z698xZ2qZ1k8FFJf_"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -884,7 +853,7 @@
    "ticketmaster:Z698xZbpZ16vpdAfZK",
    "ticketmaster:Z698xZbpZ1k18baa3"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -915,7 +884,7 @@
   "source_ids": [
    "ticketmaster:Z698xZb_Z16vfe17ut"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -951,7 +920,7 @@
    "ticketmaster:Z698xZbpZ16v00_AZt",
    "ticketmaster:Z698xZbpZ16vA3fa8g"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -982,7 +951,7 @@
   "source_ids": [
    "ticketmaster:Z698xZq2Z16v848kuK"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -1018,7 +987,7 @@
    "ticketmaster:Z698xZbpZ16v0oaN4g",
    "ticketmaster:Z698xZbpZ1kQ3j_3e"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -1059,7 +1028,7 @@
    "ticketmaster:Z698xZ8KZ1kuwPvu6",
    "ticketmaster:Z698xZ8KZ1k4bZ7GF"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -1095,7 +1064,7 @@
    "ticketmaster:Z698xZC2Z16vx9ppa7",
    "ticketmaster:Z698xZC2Z1kF848Cb"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -1136,7 +1105,7 @@
    "ticketmaster:Z698xZC4Z1k7KqVPF",
    "ticketmaster:Z698xZC4Z1k7yZ-uO"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -1177,7 +1146,7 @@
    "ticketmaster:Z698xZC2Z16v33bsfo",
    "ticketmaster:Z698xZC2Z16vFPZwaz"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -1213,7 +1182,7 @@
    "ticketmaster:Z698xZC2Z1k-yjFqJ",
    "ticketmaster:Z698xZC2Z1k0Spfua"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -1244,7 +1213,7 @@
   "source_ids": [
    "ticketmaster:Z698xZG2Z16v0pPS8o"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -1285,7 +1254,7 @@
    "ticketmaster:Z698xZC2Z1kAVfVG7",
    "ticketmaster:Z698xZC2Z1kPpawe4"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -1316,7 +1285,7 @@
   "source_ids": [
    "ticketmaster:Z698xZq2Z16vQZO6Go"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -1352,7 +1321,7 @@
    "ticketmaster:Z698xZu0Z16v-zGMZ9",
    "ticketmaster:Z698xZu0Z1kQdF8uE"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -1383,7 +1352,7 @@
   "source_ids": [
    "ticketmaster:Z698xZq2Z1k-PbVJ4"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -1419,7 +1388,7 @@
    "ticketmaster:Z698xZC2Z1kfK_OP4",
    "ticketmaster:Z698xZC2Z16vodFZbN"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -1455,7 +1424,7 @@
    "ticketmaster:Z698xZC2Z1kf3-bGJ",
    "ticketmaster:Z698xZC2Z1kG-0Sjs"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -1486,7 +1455,7 @@
   "source_ids": [
    "ticketmaster:Z698xZu3Z16vqgjK0e"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -1517,7 +1486,7 @@
   "source_ids": [
    "ticketmaster:Z698xZ2qZ16vaV0xGZ"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -1548,7 +1517,7 @@
   "source_ids": [
    "ticketmaster:Z698xZC2Z1koSuV4v"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -1579,7 +1548,7 @@
   "source_ids": [
    "ticketmaster:Z698xZ2qZ16vPsAIkv"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -1610,7 +1579,7 @@
   "source_ids": [
    "ticketmaster:Z698xZ5rZ16vFEvJbe"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -1646,7 +1615,7 @@
    "ticketmaster:Z698xZbpZ16ee7ObOy",
    "ticketmaster:Z698xZbpZ16vA0Gvjt"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -1682,7 +1651,7 @@
    "ticketmaster:Z698xZbpZ16v0w4Skv",
    "ticketmaster:Z698xZbpZ16vq4-b00"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -1713,7 +1682,7 @@
   "source_ids": [
    "ticketmaster:Z698xZbpZ16ve8-7ZV"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-26T13:16:24Z",
   "changed": [
@@ -1751,7 +1720,7 @@
   "source_ids": [
    "ticketmaster:Z698xZG2Z1k7t-Kb_"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -1782,7 +1751,7 @@
   "source_ids": [
    "ticketmaster:Z698xZb_Z16vGzpeaO"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-11-09T16:36:06Z",
   "changed": [
@@ -1825,7 +1794,7 @@
    "ticketmaster:Z698xZG2Z16v4V0b0P",
    "ticketmaster:Z698xZG2Z1krkP_as"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-28T13:10:55Z",
   "changed": [
@@ -1863,7 +1832,7 @@
   "source_ids": [
    "ticketmaster:Z698xZC2Z1kaV3fGV"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -1894,7 +1863,7 @@
   "source_ids": [
    "ticketmaster:Z698xZC2Z1kAJ0U_z"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -1940,7 +1909,7 @@
    "ticketmaster:Z698xZG2Z1kOF7zfM",
    "ticketmaster:Z698xZG2Z1kOd147O"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-28T13:10:55Z",
   "changed": [
@@ -2003,7 +1972,7 @@
    "ticketmaster:Z698xZG2Z1kbf79p6",
    "ticketmaster:Z698xZG2Z1kx87bJ_"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-28T13:10:55Z",
   "changed": [
@@ -2041,7 +2010,7 @@
   "source_ids": [
    "ticketmaster:Z698xZC2Z1kPOoea_"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -2072,7 +2041,7 @@
   "source_ids": [
    "ticketmaster:Z698xZC2Z16vb6fZkb"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -2103,7 +2072,7 @@
   "source_ids": [
    "ticketmaster:ZG9rmIYnyZd611"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -2134,7 +2103,7 @@
   "source_ids": [
    "ticketmaster:LvZ18QPw3gWS_zt41-miS"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -2165,7 +2134,7 @@
   "source_ids": [
    "ticketmaster:Z698xZ2qZ16v0SPtAE"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -2196,7 +2165,7 @@
   "source_ids": [
    "ticketmaster:Z698xZ2qZ16v8ZJ448"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []
@@ -2227,7 +2196,7 @@
   "source_ids": [
    "ticketmaster:Z698xZ2qZ1ko4op48"
   ],
-  "last_seen": "2026-11-24T17:55:12Z",
+  "last_seen": "2026-11-25T17:23:43Z",
   "missing_runs": 0,
   "first_seen": "2026-10-21T12:01:17Z",
   "changed": []

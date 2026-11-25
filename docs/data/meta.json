@@ -1,9 +1,9 @@
 {
- "lastRun": "2026-11-24T17:55:12Z",
+ "lastRun": "2026-11-25T17:23:43Z",
  "sources": {
   "ticketmaster": {
    "status": "ok",
-   "events": 332,
+   "events": 329,
    "errors": 0,
    "message": null
   },
@@ -66,9 +66,9 @@
  ],
  "notFound": [],
  "notes": [],
- "rawEvents": 332,
+ "rawEvents": 329,
  "skippedNoLocation": 5,
  "totalFailure": false,
- "lastSuccess": "2026-11-24T17:55:12Z",
- "eventsCount": 64
+ "lastSuccess": "2026-11-25T17:23:43Z",
+ "eventsCount": 63
 }
