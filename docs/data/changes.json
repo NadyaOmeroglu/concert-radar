@@ -1,29 +1,7 @@
 {
- "generatedAt": "2026-11-25T17:23:43Z",
+ "generatedAt": "2026-11-26T17:03:26Z",
  "new": [],
- "changed": [
-  {
-   "id": "21eff0e9b41e7089a69b809b313958a14dea44b9",
-   "artist": "Muse",
-   "title": "Muse - The Wow! Signal Europa Tour",
-   "date": "2026-11-25",
-   "time": "19:30",
-   "city": "Düsseldorf",
-   "country": "DE",
-   "venue": null,
-   "status": "offsale",
-   "onsale_date": "2026-06-19T08:00:00Z",
-   "url": "https://www.ticketmaster.de/event/muse-the-wow-signal-europa-tour-tickets/2083423306?language=en-us",
-   "changes": [
-    {
-     "field": "status",
-     "from": "onsale",
-     "to": "offsale",
-     "at": "2026-11-25T17:23:43Z"
-    }
-   ]
-  }
- ],
+ "changed": [],
  "onsale_soon": [],
  "removed": []
 }
